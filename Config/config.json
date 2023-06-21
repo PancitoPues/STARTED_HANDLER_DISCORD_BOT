@@ -1,0 +1,24 @@
+{
+    "canaryID": "ID_DEL_BOT_BETA",
+    "oficialID": "ID_DEL_BOT_OFICIAL",
+    "token": "TOKEN_DEL_BOT_BETA",
+    "tokenCanary": "TOKEN_DEL_BOT_OFICIAL",
+    "prefix": "!",
+    "mongodb": "URL_DE_MONGODB",
+    "ownerIDS": [
+        "TU_ID_DE_DISCORD"
+    ],
+    "developersIDS": [
+        "ID_DE_LOS_DESARROLLADORES",
+        "ID_DE_LOS_DESARROLLADORES",
+        "ID_DE_LOS_DESARROLLADORES",
+        "ID_DE_LOS_DESARROLLADORES"
+    ],
+    "colors": {
+        "amarillo": "#FFF0AB",
+        "rosaOscuro": "#F7AEF8",
+        "purpura": "#B388EB",
+        "azul": "#8093F1",
+        "celeste": "#72DDF7"
+    }
+}

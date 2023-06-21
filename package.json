@@ -1,0 +1,24 @@
+{
+  "name": "handler_discord_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-1702/STARTED_HANDLER_DISCORD_BOT_V14.11.git"
+  },
+  "author": "PancitoPues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-1702/STARTED_HANDLER_DISCORD_BOT_V14.11/issues"
+  },
+  "homepage": "https://github.com/A-1702/STARTED_HANDLER_DISCORD_BOT_V14.11#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js": "14.11",
+    "mongoose": "^7.3.1"
+  }
+}

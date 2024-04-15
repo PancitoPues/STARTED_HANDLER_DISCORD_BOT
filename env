@@ -1,0 +1,8 @@
+# If your proyect is in production = 0
+# else 1 from dev
+DEV= "1"
+PREFIX= "$"
+TOKEN_DEVELOPER= ""
+TOKEN_PRODUCTION= ""
+ID= ""
+MONGO_URI= ""

@@ -1,7 +1,7 @@
 import { ActivityType, Client, Partials, PresenceUpdateStatus, Collection, ShardingManager, Events, GatewayIntentBits, Colors } from "discord.js";
 import pkg from "../package.json" assert { type: "json" };
 import mongoose from "mongoose";
-import {readdirSync} from "node:fs";
+import { readdirSync } from "node:fs";
 export default class extends Client {
   constructor(
     options = {
@@ -51,24 +51,26 @@ export default class extends Client {
   }
   async loadSlashCommands() {
     try {
-      let slash = [];
-      readdirSync("./slashCommands/").forEach(async (carpeta) => {
-        const commands = readdirSync(`./slashCommands/${carpeta}`).filter((archivo) => archivo.endsWith(".js"));
-        for (let archivo of commands) {
-          let command = (await import(`../slashCommands/${carpeta}/${archivo}`)).default;
+      const slash = [];
+      const files = readdirSync("./slashCommands/");
+      for (const file of files) {
+        const commands = readdirSync(`./slashCommands/${file}`).filter((archivo) => archivo.endsWith(".js"));
+        for (const archivo of commands) {
+          const command = (await import(`../slashCommands/${file}/${archivo}`)).default;
           if (command.name) {
             this.slash.set(command.name, command);
             slash.push(command);
           } else {
-            console.log(`(X) Slash - ${archivo} ERROR => EMPTY FILE.`.brightRed);
+            console.log(`(X) Slash - ${archivo} ERROR => EMPTY FILE.`);
           }
         }
-      });
+      }
       await this.application.commands.set(slash);
+      console.log(slash);
     } catch (e) {
-      console.log(`[X] NEW ERROR!\n`.brightRed + `${e.stack}\n`.brightYellow);
+      console.log(`[X] NEW ERROR!\n` + `${e.stack}\n`);
     } finally {
-      console.log(`┈┈┈┈┈┈┈┈> ${(await this.application.commands.fetch()).size} SLASHCOMMANDS LOADED SUCCESSFULLY...\n`.brightYellow);
+      console.log(`┈┈┈┈┈┈┈┈> ${(await this.application.commands.fetch()).size} SLASHCOMMANDS LOADED SUCCESSFULLY...\n`);
     }
   }
 

@@ -20,7 +20,7 @@ export default async (client, interaction) => {
         embeds: [
           new Discord.EmbedBuilder()
             .setDescription(`**Lo siento, hubo un error al ejecutar este SlashCommands, vuelve a intentar más tarde...**\n\n**__ERROR EN LA CONSOLA__**\n\`\`\`${e}\`\`\``)
-            .setColor(client.colors.purpura),
+            .setColor(Discord.Colors.DarkRed),
         ],
       });
     }

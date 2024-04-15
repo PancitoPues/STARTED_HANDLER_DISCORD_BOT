@@ -8,7 +8,7 @@ export default async (client) => {
   await client.loadSlashCommands();
   //Estado del bot preparado y listo para enseñar:
   function getRandomStatusName() {
-    let estados = [
+    const estados = [
       "© COPYRIGHT 2024 - PancitPues",
       "/help | para comandos!",
       `en ${client.guilds.cache.size} servidores`,
